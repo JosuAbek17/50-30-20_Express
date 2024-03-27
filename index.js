@@ -13,15 +13,15 @@ import { validateToken } from "./controllers/authController.js";
 dotenv.config();
 const app = express();
 const MONGO_CONNECTION = process.env.MONGO_CONNECTION;
-const PORT = 3000;
 const freeeTokenEndpoints = ["/login", "/signin"];
+const port = process.env.PORT || 3000;
 
 mongoose
   .connect(MONGO_CONNECTION)
   .then(() => {
     console.log("Connected to Mongo");
-    app.listen(PORT, () => {
-      console.log(`server listening on port http://localhost:${PORT}`);
+    app.listen(port, () => {
+      console.log(`server listening at ${port}`);
     });
   })
   .catch((error) => {
