@@ -1,0 +1,5 @@
+[
+  { "dataType": "Necesario", "money": 1200, "date":"15/2/2024" },
+  { "dataType": "Ahorro", "money": 2000, "date":"15/2/2024" },
+  { "dataType": "Ocio", "money": 950, "date":"15/2/2024" }
+]
