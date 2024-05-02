@@ -1,11 +1,12 @@
 import { User } from "../models/userModel.js";
-import { sortBills } from "./billController.js";
+import { sortBills, getCurrentMonthBills } from "./billController.js";
 
 export const getSummary = async (req, res) => {
   try {
     const { id } = req.query;
     const user = await User.findById(id);
     if (user.bills.length > 0) {
+      user.bills = getCurrentMonthBills(user.bills);
       user.bills = sortBills(user.bills);
     }
     res.status(200).json({ bills: user.bills, salary: user.salary });
