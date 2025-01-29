@@ -3,8 +3,8 @@ import { sortBills, getCurrentMonthBills } from "./billController.js";
 
 export const getSummary = async (req, res) => {
   try {
-    const { id } = req.query;
-    const user = await User.findById(id);
+    const userId = req.headers.userid;
+    const user = await User.findById(userId);
     if (user.bills.length > 0) {
       user.bills = getCurrentMonthBills(user.bills);
       user.bills = sortBills(user.bills);

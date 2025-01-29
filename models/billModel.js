@@ -2,14 +2,17 @@ import mongoose from "mongoose";
 
 const billSchema = mongoose.Schema(
   {
-      billType: String,
-      billText: String,
-      amount: Number,
-      date: String
+    _id: {
+      type: mongoose.Schema.Types.ObjectId,
+      default: () => new mongoose.Types.ObjectId(),
+    },
+    billType: String,
+    billText: String,
+    amount: Number,
+    date: String,
   },
   {
     versionKey: false,
-    _id: false
   }
 );
 
