@@ -18,57 +18,59 @@ Content-Type: application/json
 
 ### Get Summary
 GET http://localhost:3000/summary
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTczODE2NDQwOSwiZXhwIjoxNzM4MTY3NDA5fQ.prM47Br3ZYdz1G7cgju6dhpf51oc54jI0QOXvWlG8Zs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTczODI1ODEwNiwiZXhwIjoxNzM4MjYxMTA2fQ.hnenaVjBe7QVimZW6TQkr_-UCvpOT7S6IqtBMdqA64k
 UserId: 6793f2453930e0c92d1c763f
 
 ### Create Bill
 POST http://localhost:3000/bill
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTczODE1Mzc3NSwiZXhwIjoxNzM4MTU2Nzc1fQ.3iYYw39pizU04jAPHrqs1UdXSqu22lSd5Ie3IjJJ0rs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTczODI1NTA2MSwiZXhwIjoxNzM4MjU4MDYxfQ.EScw9aYITen1rD8pKMA37P1XhRxCSD116dwAYf7NTs8
 UserId: 6793f2453930e0c92d1c763f
 
 {
     "bill": {
         "billType": "leisure",
-        "billText": "Patch",
+        "billText": "prueba2",
         "amount": 111,
-        "date": "29/1/2025"
+        "date": "9/2/2025"
     }
 }
 
 ### Update Bill
 PATCH  http://localhost:3000/bill
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTczODE1NTA0NSwiZXhwIjoxNzM4MTU4MDQ1fQ.qfPiJu-94h4RfxVUHR9O_ojm7kGwvDP-vWr6c3jAZWU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTczODI1NTg0OSwiZXhwIjoxNzM4MjU4ODQ5fQ.Weaiw7FjsdvbWCRj3ppRU8dHF_TPSfyhKghpZnQ0xvk
 UserId: 6793f2453930e0c92d1c763f
 
 {
-    "amount": 103,
-    "id": "679a222c7bb86cd5c522d195"
+    "bill": {
+        "amount": 2343,
+        "billText": "prueba3",
+        "_id": "679bb407a9b5baf07d89b429",
+        "date": "19/1/2025",
+        "billType": "leisure"
+    }
 }
 
 ### Delete Bill
-DELETE   http://localhost:3000/bill
+DELETE   http://localhost:3000/bill?id=679bb407a9b5baf07d89b429
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTczODE2NDQwOSwiZXhwIjoxNzM4MTY3NDA5fQ.prM47Br3ZYdz1G7cgju6dhpf51oc54jI0QOXvWlG8Zs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTczODI1NTg0OSwiZXhwIjoxNzM4MjU4ODQ5fQ.Weaiw7FjsdvbWCRj3ppRU8dHF_TPSfyhKghpZnQ0xvk
 UserId: 6793f2453930e0c92d1c763f
-
-{
-    "id": "679a329b00bdca5db9f0495a"
-}
 
 ### Get Salary
 GET     http://localhost:3000/salary
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTczODE1NzQ5MSwiZXhwIjoxNzM4MTYwNDkxfQ.XrsMPr2Fx7KaiK91vftYsMDIXeas-Eodc1b7_ByVu3g
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTczODI1MTQ1OCwiZXhwIjoxNzM4MjU0NDU4fQ.IOtlrXFXAxw6bm76jzQ-6qSYMvTRUbciGkyzMI2u4gA
 UserId: 6793f2453930e0c92d1c763f
 
 ### Set Salary
 POST    http://localhost:3000/salary
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTczODE1NzQ5MSwiZXhwIjoxNzM4MTYwNDkxfQ.XrsMPr2Fx7KaiK91vftYsMDIXeas-Eodc1b7_ByVu3g
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTczODI1MTQ1OCwiZXhwIjoxNzM4MjU0NDU4fQ.IOtlrXFXAxw6bm76jzQ-6qSYMvTRUbciGkyzMI2u4gA
 UserId: 6793f2453930e0c92d1c763f
 
 {
-    "salary": 1501
+    "salary": 2000,
+    "month": "Febrero"
 }

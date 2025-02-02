@@ -1,22 +1,24 @@
 import mongoose from "mongoose";
-import { Bill } from "./billModel.js";
+import { Expense } from "./expenseModel.js";
 
-const userSchema = mongoose.Schema({
-  email: {
-    type: String,
-    required: [true, "The email is required"],
+const userSchema = mongoose.Schema(
+  {
+    email: {
+      type: String,
+      required: [true, "The email is required"],
+    },
+    password: {
+      type: String,
+      required: [true, "The password is required"],
+    },
+    expenses: [Expense.schema]
   },
-  password: {
-    type: String,
-    required: [true, "The password is required"],
-  },
-  bills: [Bill.schema],
-  salary: Number
-},{
-  versionKey: false
-});
+  {
+    versionKey: false,
+  }
+);
 
-userSchema.methods.toJSON = function() {
+userSchema.methods.toJSON = function () {
   let user = this;
   let userObject = user.toObject();
   delete userObject.password;
