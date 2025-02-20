@@ -67,10 +67,30 @@ UserId: 6793f2453930e0c92d1c763f
 ### Set Salary
 POST    http://localhost:3000/salary
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTczODI1MTQ1OCwiZXhwIjoxNzM4MjU0NDU4fQ.IOtlrXFXAxw6bm76jzQ-6qSYMvTRUbciGkyzMI2u4gA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTc0MDA0MTgwMCwiZXhwIjoxNzQwMDQ0ODAwfQ.mEaWJs_7BaEiGgZlBr7MTazyPLKMQ5lL0hG1tPBF-4U
 UserId: 6793f2453930e0c92d1c763f
 
 {
     "salary": 2000,
     "month": "Febrero"
+}
+
+### Get Rule
+GET  http://localhost:3000/rule
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTc0MDA0OTk3MSwiZXhwIjoxNzQwMDUyOTcxfQ.OGQf0PMzjIoVdnumKdt0Vl42CfApdl3sFi3tC7MfLEI
+UserId: 6793f2453930e0c92d1c763f
+
+### Update Rule
+PATCH  http://localhost:3000/rule
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc3UuYWJlam9uQGdtYWlsLmNvbSIsImlhdCI6MTc0MDA0OTg2OSwiZXhwIjoxNzQwMDUyODY5fQ.k9VaXm1CVTOl_4fMRJoyIznLZ08f9mVYAkZ91AbbbbY
+UserId: 6793f2453930e0c92d1c763f
+
+{
+    "rule": {
+        "fixed": 60,
+        "leisure": 20,
+        "saving": 20
+    }
 }

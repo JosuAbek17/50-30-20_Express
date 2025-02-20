@@ -8,6 +8,7 @@ import { salaryRoute } from "./routes/salaryRoute.js";
 import { loginRoute } from "./routes/loginRoute.js";
 import { signinRoute } from "./routes/signinRoute.js";
 import { refreshRoute } from './routes/refreshRoute.js';
+import { ruleRoute } from './routes/ruleRoute.js';
 import { validateToken } from "./controllers/authController.js";
 
 dotenv.config();
@@ -63,3 +64,4 @@ app.use("/bill", billRoute);
 app.use("/summary", summaryRoute);
 app.use("/salary", salaryRoute);
 app.use("/refresh", refreshRoute);
+app.use("/rule", ruleRoute);

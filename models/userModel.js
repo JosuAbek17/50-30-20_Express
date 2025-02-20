@@ -11,7 +11,12 @@ const userSchema = mongoose.Schema(
       type: String,
       required: [true, "The password is required"],
     },
-    expenses: [Expense.schema]
+    expenses: [Expense.schema],
+    rule: {
+      fixed: {type: Number, default: 50},
+      leisure: {type: Number, default: 30},
+      saving: {type: Number, default: 20},
+    }
   },
   {
     versionKey: false,
